@@ -6,7 +6,7 @@
   "main": "build/index.js",
   "scripts": {
     "console": "babel-node app/index.js console",
-    "start": "nodemon app/index.js & webpack --config config/webpack/development.js --progress --colors --watch",
+    "start": "nodemon app/index.js && webpack --config config/webpack/development.js --progress --colors --watch",
     "app": "babel-node app/index.js",
     "build": "rm -rf build/ && babel -d build app && cp -r app/views build/views",
     "pm2": "NODE_ENV=production pm2 start build/index.js -i 2 --name \"kails\" --max-memory-restart 300M --merge-logs --log-date-format=\"YYYY-MM-DD HH:mm Z\" --output=\"log/production.log\"",
